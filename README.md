@@ -11,7 +11,7 @@ Scrapping now grants components.
 Green Items => Chance to grant Fine Components  
 Blue Items => Chance to grant Superior Components  
 Purple Items => Chance to grant Adronian Components  
-Legendary Items => Chance to grant Ardonian Components + a equal sized stack of the above (50% change for fine, 35% change for superior, 15% chance for ardonian)  
+Legendary Items => Chance to grant Ardonian Components + a equal sized stack of the above (50% chance for fine, 35% chance for superior, 15% chance for ardonian)  
   
 The chance for components to drop is a percentage calculated as follows:  
 % chance = 10 + half tech knowledge (including any buffs from crew etc.)  
