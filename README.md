@@ -14,10 +14,10 @@ Purple Items => Chance to grant Adronian Components
 Legendary Items => Chance to grant Ardonian Components + a equal sized stack of the above (50% change for fine, 35% change for superior, 15% chance for ardonian)  
   
 The chance for components to drop is a percentage calculated as follows:  
-% chance = 10 + half tech knowledge  
+% chance = 10 + half tech knowledge (including any buffs from crew etc.)  
 There is an additional +10% chance granted if you have the Nano Boosters engineering skill.  
   
-The quantity of components obtained depends on your chance and how well you roll, up to a maximum of a stack of 10 components.  A higher chance of any at all will also mean a higher chance for larger stacks.  
+The quantity of components obtained depends on your chance and how well you roll, up to a maximum of a stack of 10 components (or 2 stacks of 10 from scrapped legendary items).  A higher chance of any at all will also mean a higher chance for larger stacks.  
   
 A lot of iron is already obtained, so whites do not have any additional drops.  
   
