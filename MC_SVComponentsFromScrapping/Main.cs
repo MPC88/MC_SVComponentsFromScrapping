@@ -13,7 +13,7 @@ namespace MC_SVComponentsFromScrapping
     {
         public const string pluginGuid = "mc.starvalor.componentsfromscrapping";
         public const string pluginName = "SV Components From Scrapping";
-        public const string pluginVersion = "1.0.0";
+        public const string pluginVersion = "1.0.1";
 
         private const int idFineComponent = 44;
         private const int idSupComponent = 45;
@@ -52,10 +52,7 @@ namespace MC_SVComponentsFromScrapping
             }
             chance += PChar.TechLevel() / 2;
 
-            log.LogInfo("Chance: " + chance);
-
-            int roll = Random.Range(0, 100);
-            log.LogInfo("Roll: " + roll);
+            int roll = Random.Range(1, 100);
             if (roll > chance)
                 return;
 
