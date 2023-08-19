@@ -52,9 +52,11 @@ namespace MC_SVComponentsFromScrapping
             }
             chance += PChar.TechLevel() / 2;
 
-            int roll = Random.Range(1, 100);
+            int roll = Random.Range(0, 100);
             if (roll > chance)
                 return;
+            if (roll == 0)
+                roll = 1;
 
             int qnt = Mathf.Clamp(Enumerable.Range(roll, chance - roll + 1).Select(z => Mathf.FloorToInt(chance / z)).Distinct().Count(), 1, 10);
 
