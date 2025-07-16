@@ -13,7 +13,7 @@ namespace MC_SVComponentsFromScrapping
     {
         public const string pluginGuid = "mc.starvalor.componentsfromscrapping";
         public const string pluginName = "SV Components From Scrapping";
-        public const string pluginVersion = "1.0.1";
+        public const string pluginVersion = "1.1.0";
 
         private const int idFineComponent = 44;
         private const int idSupComponent = 45;
@@ -39,7 +39,7 @@ namespace MC_SVComponentsFromScrapping
             if (selectedItem == -1)
                 return;
             
-            CargoSystem cs = ((CargoSystem)typeof(Inventory).GetField("cs", AccessTools.all).GetValue(__instance));
+            CargoSystem cs = PlayerControl.inst.GetCargoSystem;
             CargoItem item = cs.cargo[selectedItem];
             if (item.itemType > 2)
                 return;
