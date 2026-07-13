@@ -35,13 +35,14 @@ namespace MC_SVComponentsFromScrapping
         [HarmonyPrefix]
         private static void ScrapItem_Pre(Inventory __instance)
         {
-            int selectedItem = (int)typeof(Inventory).GetField("selectedItem", AccessTools.all).GetValue(__instance);
-            if (selectedItem == -1)
+            // 1. Langsung ambil item yang sedang ditunjuk secara akurat
+            CargoItem item = __instance.GetSelectedCargoItem;
+            if (item == null || item.itemType > 2)
                 return;
-            
-            CargoSystem cs = ((CargoSystem)typeof(Inventory).GetField("cs", AccessTools.all).GetValue(__instance));
-            CargoItem item = cs.cargo[selectedItem];
-            if (item.itemType > 2)
+
+            // 2. Mengambil sistem kargo langsung lewat jalur resmi pengendali kapal player
+            CargoSystem cs = PlayerControl.inst.GetCargoSystem;
+            if (cs == null)
                 return;
 
             int chance = baseChance;            
